@@ -1,5 +1,5 @@
-enable-magisk-update = true # set this to false if you do not want to receive updates for the module in magisk app
-parallel-jobs = 1
+enable-magisk-update = false # set this to false if you do not want to receive updates for the module in magisk app
+#parallel-jobs = 1
 
 # add 'enabled = false' for not patching a specific app or remove it from the config
 # see https://github.com/j-hc/revanced-magisk-module/blob/main/CONFIG.md for more detailed explanations
@@ -7,22 +7,29 @@ parallel-jobs = 1
 # you can use rvmm-config-gen to generate a config
 
 [YouTube]
-build-mode = "both"
-excluded-patches = ""
-included-patches = ""
+app-name = "Youtube Revanced"
+arch = "arm64-v8a"
+build-mode = "apk"
+excluded-patches = "'Enable debugging'"
+included-patches = "'Custom branding'"
+patcher-args = "-OappName=YouTube Revanced "
+rv-brand = "Youtube Revanced"
 version = "auto"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube"
 uptodown-dlurl = "https://youtube.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.youtube"
 
 [Music]
-build-mode = "both"
-arch = "both"
+app-name = "Youtube Music Revanced"
+arch = "arm64-v8a"
+build-mode = "apk"
+rv-brand = "Youtube Music ReVanced"
 apkmirror-dlurl = "https://www.apkmirror.com/apk/google-inc/youtube-music"
 uptodown-dlurl = "https://youtube-music.en.uptodown.com/android"
 # archive-dlurl = "https://archive.org/download/jhc-apks/apks/com.google.android.apps.youtube.music"
 
 [GooglePhotos]
+enabled = "false"
 build-mode = "both"
 arch = "both"
 version = "auto"
